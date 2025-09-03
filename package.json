@@ -15,7 +15,9 @@
   "_moduleAliases": {
     "mockup": "dist/mockup",
     "routes": "dist/routes",
-    "config": "dist/config"
+    "config": "dist/config",
+    "utils": "dist/utils",
+    "types": "dist/types"
   },
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.489.0",
