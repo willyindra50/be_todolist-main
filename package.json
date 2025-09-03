@@ -5,13 +5,18 @@
   "main": "index.js",
   "scripts": {
     "dev": "DOTENV_CONFIG_PATH=.env.local nodemon --exec ts-node -r dotenv/config -r tsconfig-paths/register src/app.ts",
-    "start": "DOTENV_CONFIG_PATH=.env.local node -r dotenv/config -r tsconfig-paths/register dist/app.js",
+    "start": "DOTENV_CONFIG_PATH=.env.local node -r dotenv/config -r module-alias/register dist/app.js",
     "build": "tsc",
     "lint": "eslint . --ext .ts"
   },
   "keywords": [],
   "author": "Edwin Anderson",
   "license": "ISC",
+  "_moduleAliases": {
+    "mockup": "dist/mockup",
+    "routes": "dist/routes",
+    "config": "dist/config"
+  },
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.489.0",
     "@aws-sdk/lib-dynamodb": "^3.489.0",
@@ -19,6 +24,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "module-alias": "^2.2.3",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1",
     "uuid": "^10.0.0",
