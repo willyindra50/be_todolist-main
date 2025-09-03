@@ -111,7 +111,9 @@ app.use('/todos', todosRouter);
 
 // ✅ Default route biar "/" gak kosong
 app.get('/', (req, res) => {
-  res.send('✅ Todo API is running! Cek /api-docs untuk dokumentasi.');
+  res.send(
+    `✅ Todo API is running! Cek dokumentasi di <a href="https://betodolist-main-production.up.railway.app/api-docs/" target="_blank">API Docs</a>.`
+  );
 });
 
 app.listen(8080, () => {
